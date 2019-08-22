@@ -1,17 +1,59 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { Text, StyleSheet, Button, View, TouchableOpacity } from 'react-native';
 
-const HomeScreen = ({ navigation }) => {
-  return (
-    <View>
-      <Text style={{ fontSize: 30 }}>HomeScreen</Text>
-      <Button title="Layout" onPress={() => navigation.navigate('Layout')} />
-    </View>
-  );
-};
+const HomeScreen = ({navigation}) => {
+return <View>
+    <Text style={styles.text}>HaziGod</Text>
+    
+    <Button
+    onPress={()=> {
+      navigation.navigate('Components')
+      }} 
+    title= "Vá para os Componentes"/>
+    
+    <Button
+    onPress={()=> {
+      navigation.navigate('List')
+      }} 
+    title= "Vá para a Lista"/>
+    
+    <Button
+    onPress={()=> {
+      navigation.navigate('Image')
+      }} 
+    title= "Vá para as Imagens"/>
+    
+    <Button
+    onPress={()=> {
+      navigation.navigate('Counter')
+     }} 
+    title= "Vá para o Contador"/>
+    
+    <Button
+    onPress={()=> {
+      navigation.navigate('Color')
+      }} 
+    title= "Vá para a Tela de cores"/>
+    
+    <Button
+    onPress={()=> {
+      navigation.navigate('Square')
+      }} 
+    title= "Vá para a Tela do quadrado"/>
+    
+    <Button
+    onPress={()=> {
+      navigation.navigate('Text')
+     }} 
+    title= "Vá para a Tela de texto"/>
+  </View>
+}
 
-HomeScreen.navigationOptions = {
-  title: 'Home'
-};
+const styles = StyleSheet.create({
+  text: {
+    fontSize: 50
+  }
+})
 
-export default HomeScreen;
+export default HomeScreen
+ 
