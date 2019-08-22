@@ -1,8 +1,9 @@
 import React from 'react';
-import { Text, StyleSheet, Button, View, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, Button, View, ScrollView } from 'react-native';
 
 const HomeScreen = ({navigation}) => {
-return <View>
+return <ScrollView>
+<View style={styles.viewStyle}>
     <Text style={styles.text}>HaziGod</Text>
     
     <Button
@@ -46,12 +47,24 @@ return <View>
       navigation.navigate('Text')
      }} 
     title= "Vá para a Tela de texto"/>
+
+<Button
+    onPress={()=> {
+      navigation.navigate('Box')
+     }} 
+    title= "Vá para a Tela da Caixa"/>
   </View>
+  </ScrollView> 
 }
 
 const styles = StyleSheet.create({
   text: {
     fontSize: 50
+  },
+  viewStyle:{
+    justifyContent: 'space-between',
+    height: 600,
+    margin: 10
   }
 })
 
